@@ -1,0 +1,68 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "timestamp": "2026-08-29T19:58:51.190836+00:00",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "7a8f0536-eb79-42fd-b6ad-14b936f829f1",
+        "status": "in-progress",
+        "class": {
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "display": "?"
+        },
+        "serviceProvider": {
+          "display": "phc-purnia"
+        },
+        "reasonCode": [
+          {
+            "text": "Rabies exposure"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "display": "Rabies exposure",
+              "coding": []
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "working"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "status": "active",
+        "intent": "order",
+        "priority": "routine",
+        "code": {
+          "text": "Referral"
+        },
+        "requester": {
+          "display": "phc-purnia"
+        },
+        "performer": [
+          {
+            "display": "\u091c\u093f\u0932\u093e \u0905\u0938\u094d\u092a\u0924\u093e\u0932 \u092f\u093e \u092e\u0947\u0921\u093f\u0915\u0932 \u0915\u0949\u0932\u0947\u091c"
+          }
+        ],
+        "note": [
+          {
+            "text": "\u0915\u0941\u0924\u094d\u0924\u0947 \u0915\u0947 \u0915\u093e\u091f\u0928\u0947 \u0915\u093e \u092e\u093e\u092e\u0932\u093e, anti-rabies \u0907\u0902\u091c\u0947\u0915\u094d\u200d\u0936\u0928 \u0909\u092a\u0932\u092c\u094d\u0927 \u0928\u0939\u0940\u0902, \u0924\u0941\u0930\u0902\u0924 \u0930\u0947\u092b\u0930 \u0915\u0930\u0947\u0902\u0964"
+          }
+        ]
+      }
+    }
+  ]
+}

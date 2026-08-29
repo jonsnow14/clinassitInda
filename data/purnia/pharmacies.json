@@ -1,0 +1,87 @@
+[
+  {
+    "id": "pmbjk-khajanchi",
+    "name": "Jan Aushadhi Kendra — Khajanchi Hat",
+    "kind": "jan_aushadhi",
+    "lat": 25.7758,
+    "lng": 87.4780,
+    "phone": "+91-90066-12011",
+    "pincode": "854301",
+    "stock": {
+      "aspirin": true,
+      "clopidogrel": true,
+      "atorvastatin": true,
+      "metformin": true,
+      "amlodipine": true,
+      "isosorbide": false
+    }
+  },
+  {
+    "id": "pmbjk-line-bazar",
+    "name": "Jan Aushadhi Kendra — Line Bazar",
+    "kind": "jan_aushadhi",
+    "lat": 25.7804,
+    "lng": 87.4695,
+    "phone": "+91-88042-77190",
+    "pincode": "854301",
+    "stock": {
+      "aspirin": true,
+      "clopidogrel": false,
+      "atorvastatin": true,
+      "metformin": true,
+      "amlodipine": true,
+      "isosorbide": true
+    }
+  },
+  {
+    "id": "pmbjk-kasba",
+    "name": "Jan Aushadhi Kendra — Kasba",
+    "kind": "jan_aushadhi",
+    "lat": 25.8488,
+    "lng": 87.5370,
+    "phone": "+91-94700-22118",
+    "pincode": "854325",
+    "stock": {
+      "aspirin": true,
+      "clopidogrel": true,
+      "atorvastatin": false,
+      "metformin": true,
+      "amlodipine": true,
+      "isosorbide": false
+    }
+  },
+  {
+    "id": "priv-gupta",
+    "name": "Gupta Medical Hall",
+    "kind": "private",
+    "lat": 25.7769,
+    "lng": 87.4731,
+    "phone": "+91-99312-90821",
+    "pincode": "854301",
+    "stock": {
+      "aspirin": true,
+      "clopidogrel": true,
+      "atorvastatin": true,
+      "metformin": true,
+      "amlodipine": true,
+      "isosorbide": true
+    }
+  },
+  {
+    "id": "priv-wellness",
+    "name": "Wellness Forever Purnia",
+    "kind": "private",
+    "lat": 25.7722,
+    "lng": 87.4844,
+    "phone": "+91-91220-44177",
+    "pincode": "854301",
+    "stock": {
+      "aspirin": true,
+      "clopidogrel": true,
+      "atorvastatin": true,
+      "metformin": false,
+      "amlodipine": true,
+      "isosorbide": true
+    }
+  }
+]

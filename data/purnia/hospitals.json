@@ -1,0 +1,93 @@
+[
+  {
+    "id": "gmch-purnea",
+    "name": "Government Medical College and Hospital, Purnea",
+    "type": "tertiary",
+    "lat": 25.7786,
+    "lng": 87.4798,
+    "beds_icu": 6,
+    "beds_oxygen": 18,
+    "beds_general": 40,
+    "accepts_nstemi": true,
+    "phone": "+91-79033-02043",
+    "notes": "Line Bazar. Real facility. ICU/O2 counts are POC estimates, not a live HMIS feed."
+  },
+  {
+    "id": "sadar-purnia",
+    "name": "Sadar Hospital Purnia",
+    "type": "district",
+    "lat": 25.7778,
+    "lng": 87.4785,
+    "beds_icu": 2,
+    "beds_oxygen": 10,
+    "beds_general": 24,
+    "accepts_nstemi": true,
+    "phone": "+91-93041-98796",
+    "notes": "Line Bazar, Bihar Talkies Rd. Real public hospital (PMJAY listed). Bed counts estimated for POC."
+  },
+  {
+    "id": "sdh-banmankhi",
+    "name": "Sub-Divisional Hospital Banmankhi",
+    "type": "sdh",
+    "lat": 25.8519,
+    "lng": 87.1861,
+    "beds_icu": 0,
+    "beds_oxygen": 8,
+    "beds_general": 20,
+    "accepts_nstemi": false,
+    "phone": "+91-77397-35360",
+    "notes": "Stabilisation and oxygen. Refer ACS onward."
+  },
+  {
+    "id": "sdh-dhamdaha",
+    "name": "Sub-Divisional Hospital Dhamdaha",
+    "type": "sdh",
+    "lat": 25.7430,
+    "lng": 87.1740,
+    "beds_icu": 0,
+    "beds_oxygen": 6,
+    "beds_general": 16,
+    "accepts_nstemi": false,
+    "phone": "+91-85444-21716",
+    "notes": "Oxygen / general ward. Not PCI-capable."
+  },
+  {
+    "id": "chc-kasba",
+    "name": "CHC Kasba",
+    "type": "chc",
+    "lat": 25.8502,
+    "lng": 87.5384,
+    "beds_icu": 0,
+    "beds_oxygen": 6,
+    "beds_general": 18,
+    "accepts_nstemi": false,
+    "phone": "+91-94306-79508",
+    "notes": "Oxygen and stabilisation only"
+  },
+  {
+    "id": "galaxy-heart-purnia",
+    "name": "Galaxy Hospital and Heart Care Centre",
+    "type": "private",
+    "lat": 25.7755,
+    "lng": 87.4720,
+    "beds_icu": 3,
+    "beds_oxygen": 8,
+    "beds_general": 16,
+    "accepts_nstemi": true,
+    "phone": "+91-82100-52435",
+    "notes": "Private heart-care centre in Purnia (PMJAY listed). Bed counts estimated for POC."
+  },
+  {
+    "id": "fatma-purnia",
+    "name": "Fatma Hospital",
+    "type": "private",
+    "lat": 25.7732,
+    "lng": 87.4701,
+    "beds_icu": 1,
+    "beds_oxygen": 4,
+    "beds_general": 12,
+    "accepts_nstemi": false,
+    "phone": "+91-99312-13287",
+    "notes": "Private hospital (PMJAY listed). Refer ACS to GMCH / Galaxy."
+  }
+]

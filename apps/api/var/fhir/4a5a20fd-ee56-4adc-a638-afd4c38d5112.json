@@ -1,0 +1,83 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "timestamp": "2026-08-29T18:23:23.814173+00:00",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "4a5a20fd-ee56-4adc-a638-afd4c38d5112",
+        "status": "in-progress",
+        "class": {
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "display": "?"
+        },
+        "serviceProvider": {
+          "display": "phc-purnia"
+        },
+        "reasonCode": [
+          {
+            "text": "not stated in passage, null"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "display": "not stated in passage, null",
+              "coding": []
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "working"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Anti-platelet therapy shuru karein: Aspirin loading dose 325 mg, uske baad 75 mg"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Anti-platelet therapy shuru karein: Aspirin loading dose 325 mg, uske baad 75 mg OD (ICMR passage 1, 3). Clopidogrel loading dose 300 mg, uske baad 75 mg OD bhi consider karein (ICMR passage 1, 3)."
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "status": "draft",
+        "intent": "order",
+        "priority": "routine",
+        "code": {
+          "text": "Referral"
+        },
+        "requester": {
+          "display": "phc-purnia"
+        },
+        "performer": [
+          {
+            "display": ""
+          }
+        ],
+        "note": [
+          {
+            "text": ""
+          }
+        ]
+      }
+    }
+  ]
+}

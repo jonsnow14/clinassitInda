@@ -1,0 +1,88 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "timestamp": "2026-08-29T18:39:10.561398+00:00",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "caed807c-63a7-4189-9ffd-47fdfa40adc0",
+        "status": "in-progress",
+        "class": {
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "display": "?"
+        },
+        "serviceProvider": {
+          "display": "phc-purnia"
+        },
+        "reasonCode": [
+          {
+            "text": "Unstable Angina / NSTEMI"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "display": "Unstable Angina / NSTEMI",
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I20.0"
+                }
+              ]
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "working"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Antiplatelet loading dena"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Aspirin 325 mg loading dose immediately do, uske baad 75 mg OD continue karo. Agar aspirin allergy nahi hai toh Clopidogrel 300 mg loading dose bhi de sakte ho."
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "status": "active",
+        "intent": "order",
+        "priority": "stat",
+        "code": {
+          "text": "Referral"
+        },
+        "requester": {
+          "display": "phc-purnia"
+        },
+        "performer": [
+          {
+            "display": "District Hospital ICU with ECG monitoring and defibrillator"
+          }
+        ],
+        "note": [
+          {
+            "text": "Suspected NSTEMI/Unstable Angina, diabetic, severe chest pain - refer for ICU admission and revascularization assessment."
+          }
+        ]
+      }
+    }
+  ]
+}

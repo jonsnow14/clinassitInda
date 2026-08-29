@@ -1,0 +1,68 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "timestamp": "2026-08-29T18:59:06.206924+00:00",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "4834ab4f-7bc2-4945-8b6d-5a4296d2f617",
+        "status": "in-progress",
+        "class": {
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "display": "?"
+        },
+        "serviceProvider": {
+          "display": "phc-purnia"
+        },
+        "reasonCode": [
+          {
+            "text": "Snake bite with traumatic injury"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "display": "Snake bite with traumatic injury",
+              "coding": []
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "working"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "status": "active",
+        "intent": "order",
+        "priority": "routine",
+        "code": {
+          "text": "Referral"
+        },
+        "requester": {
+          "display": "phc-purnia"
+        },
+        "performer": [
+          {
+            "display": "CHC ya District Hospital for wound debridement and ASV"
+          }
+        ],
+        "note": [
+          {
+            "text": "Snake bite with traumatic multiple wounds, refer for advanced wound care and ASV monitoring."
+          }
+        ]
+      }
+    }
+  ]
+}

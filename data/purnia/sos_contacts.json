@@ -1,0 +1,34 @@
+[
+  {
+    "id": "sos-thana",
+    "name": "Purnia Sadar Thana",
+    "kind": "police",
+    "phone": "112",
+    "lat": 25.7796,
+    "lng": 87.4778
+  },
+  {
+    "id": "sos-sdm",
+    "name": "SDM Purnia Sadar",
+    "kind": "admin",
+    "phone": "+91-6454-242001",
+    "lat": 25.7778,
+    "lng": 87.4766
+  },
+  {
+    "id": "sos-asha",
+    "name": "ASHA Sangini — Ward 8",
+    "kind": "community",
+    "phone": "+91-99344-11820",
+    "lat": 25.7735,
+    "lng": 87.4702
+  },
+  {
+    "id": "sos-vol",
+    "name": "Red Cross community volunteer",
+    "kind": "volunteer",
+    "phone": "+91-91224-33001",
+    "lat": 25.7908,
+    "lng": 87.4555
+  }
+]

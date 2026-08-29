@@ -1,0 +1,68 @@
+[
+  {
+    "id": "amb-108-1",
+    "name": "108 GVK EMRI Unit 12",
+    "kind": "ambulance",
+    "available": true,
+    "lat": 25.7824,
+    "lng": 87.4901,
+    "eta_min": 8,
+    "phone": "108",
+    "oxygen": true
+  },
+  {
+    "id": "amb-108-2",
+    "name": "108 GVK EMRI Unit 19",
+    "kind": "ambulance",
+    "available": true,
+    "lat": 25.8012,
+    "lng": 87.4510,
+    "eta_min": 14,
+    "phone": "108",
+    "oxygen": true
+  },
+  {
+    "id": "amb-dh",
+    "name": "District Hospital ALS",
+    "kind": "ambulance",
+    "available": false,
+    "lat": 25.7789,
+    "lng": 87.4812,
+    "eta_min": 25,
+    "phone": "+91-6454-242280",
+    "oxygen": true
+  },
+  {
+    "id": "amb-private",
+    "name": "Purnia Seva Ambulance",
+    "kind": "ambulance",
+    "available": true,
+    "lat": 25.7690,
+    "lng": 87.4622,
+    "eta_min": 11,
+    "phone": "+91-98765-22110",
+    "oxygen": true
+  },
+  {
+    "id": "vol-1",
+    "name": "ASHA volunteer Tata Ace (Gulab)",
+    "kind": "volunteer",
+    "available": true,
+    "lat": 25.7735,
+    "lng": 87.4702,
+    "eta_min": 6,
+    "phone": "+91-99344-11820",
+    "oxygen": false
+  },
+  {
+    "id": "vol-2",
+    "name": "Red Cross volunteer Bolero",
+    "kind": "volunteer",
+    "available": true,
+    "lat": 25.7908,
+    "lng": 87.4555,
+    "eta_min": 12,
+    "phone": "+91-91224-33001",
+    "oxygen": false
+  }
+]

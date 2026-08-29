@@ -1,0 +1,38 @@
+[
+  {
+    "id": "exp-cardio-1",
+    "name": "Dr. Anita Jha",
+    "specialty": "Cardiology",
+    "mode": "on_call",
+    "availability": "available",
+    "eta_min": 5,
+    "phone": "+91-94310-22110",
+    "facility": "Government Medical College and Hospital, Purnea",
+    "lat": 25.7786,
+    "lng": 87.4798
+  },
+  {
+    "id": "exp-med-1",
+    "name": "Dr. Suresh Prasad",
+    "specialty": "Internal Medicine",
+    "mode": "phone",
+    "availability": "busy",
+    "eta_min": 40,
+    "phone": "+91-94312-11880",
+    "facility": "Sadar District Hospital",
+    "lat": 25.7789,
+    "lng": 87.4812
+  },
+  {
+    "id": "exp-cardio-2",
+    "name": "Dr. Md. Irfan Alam",
+    "specialty": "Cardiology",
+    "mode": "on_call",
+    "availability": "on_call",
+    "eta_min": 20,
+    "phone": "+91-88041-22990",
+    "facility": "Sadar District Hospital",
+    "lat": 25.7789,
+    "lng": 87.4812
+  }
+]

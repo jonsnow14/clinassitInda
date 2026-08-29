@@ -1,0 +1,114 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+:root {
+  --bg: #070b12;
+  --panel: #101826;
+  --card: #152033;
+  --ink: #f4f7fb;
+  --muted: #9aa8bc;
+  --urgent: #e11d48;
+  --warn: #f59e0b;
+  --safe: #16a34a;
+  --line: #243044;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-urgent: var(--urgent);
+  --color-warn: var(--warn);
+  --color-safe: var(--safe);
+  --color-line: var(--line);
+}
+
+html,
+body {
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 18px;
+}
+
+body {
+  font-family: var(--font-sans), "Noto Sans Devanagari", system-ui, sans-serif;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.chip,
+.btn-secondary,
+.btn-primary {
+  min-height: 48px;
+  padding: 0 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.chip {
+  background: #1c2a3f;
+  border: 1px solid var(--line);
+}
+
+.chip-active {
+  background: #1d4ed8;
+  border-color: #60a5fa;
+}
+
+.btn-primary {
+  background: #1d4ed8;
+  color: white;
+}
+
+.btn-secondary {
+  background: #1c2a3f;
+  border: 1px solid var(--line);
+}
+
+.btn-sos {
+  background: var(--urgent);
+  color: white;
+  min-height: 48px;
+  min-width: 72px;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+.badge-safe {
+  background: #14532d;
+  color: #bbf7d0;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.badge-muted {
+  background: #1f2937;
+  color: #cbd5e1;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.leaflet-container {
+  background: #0b1220;
+  font-family: inherit;
+}

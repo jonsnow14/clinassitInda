@@ -1,0 +1,68 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "timestamp": "2026-08-29T18:55:03.305621+00:00",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "068bed30-048a-4d8e-874f-6947b0389949",
+        "status": "in-progress",
+        "class": {
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "display": "?"
+        },
+        "serviceProvider": {
+          "display": "phc-purnia"
+        },
+        "reasonCode": [
+          {
+            "text": "Snake bite with local tissue necrosis"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "display": "Snake bite with local tissue necrosis",
+              "coding": []
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "working"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "status": "active",
+        "intent": "order",
+        "priority": "stat",
+        "code": {
+          "text": "Referral"
+        },
+        "requester": {
+          "display": "phc-purnia"
+        },
+        "performer": [
+          {
+            "display": "District hospital / Snake bite treatment centre with ICU and antivenom"
+          }
+        ],
+        "note": [
+          {
+            "text": "Unknown snake bite with multiple wounds, necrosis, refer urgently."
+          }
+        ]
+      }
+    }
+  ]
+}
