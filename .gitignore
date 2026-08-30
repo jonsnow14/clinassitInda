@@ -1,0 +1,32 @@
+# secrets
+.env
+.env.local
+*.env
+!.env.example
+
+# python
+.venv
+**/__pycache__/
+**/*.pyc
+.mypy_cache/
+
+# node / next
+**/node_modules/
+**/.next/
+**/.turbo/
+*.tsbuildinfo
+next-env.d.ts
+
+# generated at ingest / runtime
+apps/api/var/
+data/chroma/*
+!data/chroma/README.md
+data/icmr/pdfs/
+
+# logs / os
+*.log
+.DS_Store
+
+# local editor stubs
+.latentcode
+.opencode

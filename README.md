@@ -52,9 +52,12 @@ Then tap **बेड**, **एम्बुलेंस**, **दवाई**, **ए
 ## Layout
 
 ```
-apps/api    FastAPI + RAG + agents
-apps/web    Next.js PHC workspace
-data/icmr   Downloaded PDFs
-data/chroma Persistent vectors
-data/purnia Ops JSON
+apps/api     FastAPI + RAG + agents
+apps/web     Next.js PHC workspace
+data/purnia  Curated ops JSON (in git)
+data/icmr    STW PDFs (downloaded by ingest, not in git)
+data/chroma  Vector index (built by ingest, not in git)
+docs/        Architecture, problem statement, roadmap, design
 ```
+
+See `docs/architecture.md`, `docs/problem-statement.md`, and `docs/roadmap.md`.
