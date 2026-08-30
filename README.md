@@ -106,6 +106,8 @@ Two local processes: the Next.js workspace talks to FastAPI over same-origin `/v
 
 Clinical path: Hinglish in → Sarvam extract English facts → MiniLM retrieve ICMR passages → Sarvam grounded `ClinicalCard` → Mayura Hindi → silent FHIR write.
 
+**Developer prompt skill (not on the live path).** [prompt-optimizer](https://skillpatch.dev/skill/prompt-optimizer) (SkillPatch, Sentry) is a **developer-only** LatentCode skill at `.latentcode/skills/prompt-optimizer/`. Use `/prompt-optimizer` in LatentCode to tighten `EXTRACT_SYSTEM` and `GENERATE_SYSTEM` in `apps/api/app/rag/clinical_agent.py` against an eval set. It does **not** rewrite the PHC worker’s note at request time. Live consult stays extract → Chroma → generate. Details: **[docs/architecture.md](docs/architecture.md#41-developer-prompt-optimizer)**.
+
 Agents fire only from UI buttons / slash commands (`/clinical`, `/beds`, `/transport`, `/pharmacy`, `/expert`, `/sos`).
 
 ```
@@ -115,6 +117,7 @@ data/purnia  Curated ops JSON (in git)
 data/icmr    STW PDFs (downloaded by ingest, not in git)
 data/chroma  Vector index (built by ingest, not in git)
 docs/        Architecture, problem statement, roadmap, design
+.latentcode/skills/prompt-optimizer   Dev-only SkillPatch (EXTRACT_SYSTEM / GENERATE_SYSTEM)
 ```
 
 Full module list, endpoints, and the five-step clinical pipeline: **[docs/architecture.md](docs/architecture.md)**.

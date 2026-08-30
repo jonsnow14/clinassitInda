@@ -137,6 +137,34 @@ The clinical consultation flow overcomes the "Hinglish-to-Vector" semantic gap u
 └──────────────────────────────────────────────┘
 ```
 
+The two Sarvam system strings for this pipeline live in `apps/api/app/rag/clinical_agent.py`:
+
+- **`EXTRACT_SYSTEM`** — Step 1. Turns the worker’s Hinglish/Hindi/English note into `ClinicalFacts` JSON and an English `english_query` for MiniLM. Must not invent labs or diagnose.
+- **`GENERATE_SYSTEM`** — Step 3. Turns facts + retrieved ICMR passages into a `ClinicalCard` (urgency, Devanagari worker text, PHC-feasible steps, referral, disclaimer).
+
+### 4.1 Developer prompt-optimizer
+
+[prompt-optimizer](https://skillpatch.dev/skill/prompt-optimizer) (SkillPatch, creator **Sentry**) is installed as a **developer skill** for LatentCode:
+
+```
+.latentcode/skills/prompt-optimizer/SKILL.md
+```
+
+It is **not** part of the serving path. The PHC worker’s text is never sent through SkillPatch or a second “optimize this prompt” model. Consult remains:
+
+```
+Hinglish note → EXTRACT_SYSTEM (Sarvam) → Chroma → GENERATE_SYSTEM (Sarvam) → Mayura → FHIR
+```
+
+**How to use it (dev only):**
+
+1. Freeze eval cases (golden NSTEMI plus STEMI / HF / diabetes / thin Hinglish).
+2. Baseline `POST /v1/clinical/consult` with the current `EXTRACT_SYSTEM` / `GENERATE_SYSTEM`.
+3. In LatentCode, run `/prompt-optimizer` against those two strings only. Target model for the *rewritten* prompts is still **Sarvam `sarvam-105b`** (the LatentCode chat model only authors the strings).
+4. Patch the constants in `clinical_agent.py`, re-run the same cases, keep a holdout. Do not change `consult()` control flow, retriever, ops agents, or Mayura.
+
+The skill’s contract: eval-first rewrite of system/developer prompts. Out of scope: live user-payload rewriting, ops JSON agents (`/beds`, `/transport`, `/pharmacy`), and adding SkillPatch to `requirements.txt`.
+
 ---
 
 ## 5. Next.js Frontend Workspace (`apps/web`)

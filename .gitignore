@@ -28,7 +28,9 @@ data/icmr/pdfs/
 .DS_Store
 
 # local editor stubs
-.latentcode
+.latentcode/*
+!.latentcode/skills/
+!.latentcode/skills/**
 .opencode
 
 #intial problem statement draft
