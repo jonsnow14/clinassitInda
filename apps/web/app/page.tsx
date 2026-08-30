@@ -37,10 +37,20 @@ const AGENTS: { id: AgentId; label: string }[] = [
   { id: "sos", label: "SOS" },
 ];
 
+/**
+ * Generates a unique pseudo-random ID string for chat messages.
+ *
+ * @returns {string} Short unique ID.
+ */
 function uid() {
   return Math.random().toString(36).slice(2);
 }
 
+/**
+ * Main application dashboard for ClinAssistIndia PHC workers.
+ * Features clinical decision workspace, real-time script transliteration (Mayura),
+ * specialized sub-agents (Beds, Transport, Pharmacy, Expert, SOS), and dynamic map view.
+ */
 export default function Home() {
   const [health, setHealth] = useState<Health | null>(null);
   const [healthErr, setHealthErr] = useState(false);
@@ -254,8 +264,8 @@ export default function Home() {
       setSosOpen(true);
       return;
     }
-    if (a !== "beds" && a !== "transport" && a !== "pharmacy" && a !== "expert" && a !== "sos") return;
-    if (!caseReady && a !== "sos") {
+    if (a !== "beds" && a !== "transport" && a !== "pharmacy" && a !== "expert") return;
+    if (!caseReady) {
       push({
         id: uid(),
         role: "agent",

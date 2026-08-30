@@ -18,6 +18,13 @@ export const metadata: Metadata = {
   description: "ICMR-grounded decision support for PHC workers",
 };
 
+/**
+ * Root Layout component for the ClinAssistIndia Next.js web application.
+ * Sets up global fonts (`Noto_Sans`, `Noto_Sans_Devanagari`), styles, and language attribute.
+ *
+ * @param {Object} props
+ * @param {React.ReactNode} props.children - Page content.
+ */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="hi">

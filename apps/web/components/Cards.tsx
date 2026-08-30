@@ -10,6 +10,13 @@ import type {
   Track,
 } from "@/lib/types";
 
+/**
+ * Header banner displaying urgency classification and primary title/diagnosis.
+ *
+ * @param {Object} props
+ * @param {string} props.urgency - Severity level ("urgent" | "priority" | "routine").
+ * @param {string} props.title - Diagnosis or alert title.
+ */
 export function UrgentBanner({ urgency, title }: { urgency: string; title: string }) {
   const cls =
     urgency === "urgent"
@@ -24,6 +31,15 @@ export function UrgentBanner({ urgency, title }: { urgency: string; title: strin
   );
 }
 
+/**
+ * Component displaying ICMR Standard Treatment Workflow clinical assessment,
+ * step-by-step guidance, red flags/contraindications, referral slips, and source evidence.
+ *
+ * @param {Object} props
+ * @param {ClinicalCard} props.card - Structured clinical advice payload.
+ * @param {boolean} [props.debug] - Flag to show additional FHIR ID and metadata debug details.
+ * @param {(action: SuggestedAction) => void} props.onAction - Handler invoked when a suggested action chip is selected.
+ */
 export function ClinicalCardView({
   card,
   debug,
@@ -126,6 +142,12 @@ export function ClinicalCardView({
   );
 }
 
+/**
+ * Returns Hindi UI label corresponding to a suggested action type.
+ *
+ * @param {SuggestedAction} a - Action type identifier.
+ * @returns {string} Hindi display label.
+ */
 export function actionLabel(a: SuggestedAction) {
   return {
     beds: "बेड खोजें",
@@ -136,6 +158,14 @@ export function actionLabel(a: SuggestedAction) {
   }[a];
 }
 
+/**
+ * List view of nearby hospitals with available beds and referral trigger button.
+ *
+ * @param {Object} props
+ * @param {Hospital[]} props.hospitals - List of hospital objects.
+ * @param {string} [props.note] - Optional note regarding bed search context.
+ * @param {(hospital: Hospital) => void} props.onRefer - Referral action callback.
+ */
 export function BedsCard({
   hospitals,
   note,
@@ -173,6 +203,12 @@ export function BedsCard({
   );
 }
 
+/**
+ * Displays status and estimated time of arrival (ETA) for active emergency transport vehicle.
+ *
+ * @param {Object} props
+ * @param {Track} props.track - Tracking data object for vehicle location and ETA.
+ */
 export function TransportCard({ track }: { track: Track }) {
   return (
     <article className="card">
@@ -187,6 +223,14 @@ export function TransportCard({ track }: { track: Track }) {
   );
 }
 
+/**
+ * List view of local pharmacies, medicine availability, and option to dispatch volunteer pickup.
+ *
+ * @param {Object} props
+ * @param {Pharmacy[]} props.pharmacies - List of pharmacies.
+ * @param {string} props.note - Explanatory note or medicine query summary.
+ * @param {(pharmacy: Pharmacy) => void} props.onDispatch - Callback to assign courier dispatch.
+ */
 export function PharmacyCard({
   pharmacies,
   note,
@@ -224,6 +268,13 @@ export function PharmacyCard({
   );
 }
 
+/**
+ * Card listing available specialist medical experts for tele-consultation.
+ *
+ * @param {Object} props
+ * @param {Expert[]} props.experts - Array of medical expert profiles.
+ * @param {(expert: Expert) => void} props.onConnect - Callback to initiate connection/consultation request.
+ */
 export function ExpertCard({
   experts,
   onConnect,
@@ -260,6 +311,12 @@ export function ExpertCard({
   );
 }
 
+/**
+ * Displays active emergency SOS status, acknowledgement state, and notified contacts.
+ *
+ * @param {Object} props
+ * @param {SosStatus} props.sos - Emergency SOS state object.
+ */
 export function SosCard({ sos }: { sos: SosStatus }) {
   return (
     <article className="card border-urgent/50">

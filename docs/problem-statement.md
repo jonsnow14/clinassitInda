@@ -151,3 +151,15 @@ the PHC worker  is sort of medicines in her stock , needs to find if the medicin
   3. Tracks respone and keep PHC worker updated  real time
 
 
+
+
+README structure
+
+- Table of content
+- Project Description
+- How to reproduce
+- Architecture  ( description,diagramitcal representation, include line to architecure.md files)
+- What problem it solves
+- Some test prompts 
+- Existing  constrains
+- future roadmap 

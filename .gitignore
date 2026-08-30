@@ -30,3 +30,6 @@ data/icmr/pdfs/
 # local editor stubs
 .latentcode
 .opencode
+
+#intial problem statement draft
+problem-statement.md

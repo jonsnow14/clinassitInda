@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const API = process.env.API_INTERNAL_URL || "http://127.0.0.1:8001";
+const API = process.env.API_INTERNAL_URL || "http://127.0.0.1:8002";
 
 const nextConfig: NextConfig = {
   experimental: {

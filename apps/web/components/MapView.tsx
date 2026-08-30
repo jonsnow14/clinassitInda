@@ -3,12 +3,24 @@
 import { useEffect, useRef } from "react";
 import type { Hospital, Track } from "@/lib/types";
 
+/**
+ * Component properties for MapView.
+ */
 type Props = {
+  /** Primary Health Centre (PHC) location and details. */
   phc: { lat: number; lng: number; name: string };
+  /** Nearby hospital locations and ICU bed stats. */
   hospitals?: Hospital[];
+  /** Active transport or courier tracking payload. */
   track?: Track | null;
 };
 
+/**
+ * Interactive Leaflet map component rendering PHC location, hospital markers,
+ * and dispatch routes for emergency transport / courier vehicles.
+ *
+ * @param {Props} props - Map component properties.
+ */
 export default function MapView({ phc, hospitals = [], track }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const mapRef = useRef<import("leaflet").Map | null>(null);

@@ -10,7 +10,7 @@ The system consists of a Next.js frontend workspace communicating with an asynch
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────┐
-│                             Next.js Frontend (Port 3001)                         │
+│                             Next.js Frontend (Port 3002)                         │
 │  ┌───────────────────────┐   ┌───────────────────────┐   ┌────────────────────┐  │
 │  │ Clinical Chat & Card  │   │   Mayura Script Hook  │   │  Leaflet Map View  │  │
 │  └───────────┬───────────┘   └───────────┬───────────┘   └─────────┬──────────┘  │
@@ -19,7 +19,7 @@ The system consists of a Next.js frontend workspace communicating with an asynch
                │ HTTP Proxy (/v1/*)        │ Transliterate           │ Polling (3s)
                ▼                           ▼                         ▼
 ┌──────────────────────────────────────────────────────────────────────────────────┐
-│                            FastAPI Backend (Port 8001)                           │
+│                            FastAPI Backend (Port 8002)                           │
 │  ┌───────────────────────┐   ┌───────────────────────┐   ┌────────────────────┐  │
 │  │    Clinical Agent     │   │   Operations Agent    │   │  Pharmacist Agent  │  │
 │  └───────────┬───────────┘   └───────────┬───────────┘   └─────────┬──────────┘  │
@@ -56,7 +56,7 @@ The system consists of a Next.js frontend workspace communicating with an asynch
 
 ## 3. Python API Backend (`apps/api`)
 
-The backend is built with FastAPI and runs on Uvicorn on **Port 8001**.
+The backend is built with FastAPI and runs on Uvicorn on **Port 8002**.
 
 ### 3.1 Service Endpoints
 
@@ -141,7 +141,7 @@ The clinical consultation flow overcomes the "Hinglish-to-Vector" semantic gap u
 
 ## 5. Next.js Frontend Workspace (`apps/web`)
 
-The frontend is built with Next.js 15 App Router, React 19, and TailwindCSS running on **Port 3001**.
+The frontend is built with Next.js 15 App Router, React 19, and TailwindCSS running on **Port 3002**.
 
 ### 5.1 Architecture & Page Structure
 
@@ -192,9 +192,9 @@ For POC reliability and edge deployment feasibility, operational registries are 
 
 ### 8.1 Network Routing & Proxying
 
-- **UI Port**: `3001` (Next.js development server)
-- **API Port**: `8001` (Uvicorn / FastAPI server)
-- Next.js proxies all `/v1/*` frontend requests directly to `http://127.0.0.1:8001` as configured in `apps/web/next.config.ts`:
+- **UI Port**: `3002` (Next.js development server)
+- **API Port**: `8002` (Uvicorn / FastAPI server)
+- Next.js proxies all `/v1/*` frontend requests directly to `http://127.0.0.1:8002` as configured in `apps/web/next.config.ts`:
 
 ```typescript
 const nextConfig: NextConfig = {
@@ -202,14 +202,14 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/v1/:path*",
-        destination: "http://127.0.0.1:8001/v1/:path*",
+        destination: "http://127.0.0.1:8002/v1/:path*",
       },
     ];
   },
 };
 ```
 
-- FastAPI enables CORS specifically for `http://localhost:3001` and `http://127.0.0.1:3001`.
+- FastAPI enables CORS specifically for `http://localhost:3002` and `http://127.0.0.1:3002`.
 
 ### 8.2 Execution & Environment Requirements
 
