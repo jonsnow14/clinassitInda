@@ -212,14 +212,14 @@ Shipped for the POC: ICMR RAG clinical card, human-triggered beds / transport / 
 
 Next, in order:
 
-1. Demo recording and pitch (last 48-hour checklist item).
-2. Real notifications — WhatsApp / SMS for pharmacy enquiry and SOS, instead of in-app only.
-3. Live ops feeds — hospital bed APIs / NHP-style directories instead of static JSON.
-4. Real tracking — GPS or a message bus (Redis pub/sub), not 3s simulated polls.
-5. Expert path — WebRTC (or a phone bridge) instead of a directory + stub consult.
-6. ABDM — POST the FHIR bundle to a sandbox, not only disk.
-7. Geography — more blocks than Purnia 854301; radius search when PIN misses.
-8. Corpus — more STWs (snakebite, maternal, sepsis) still ICMR-grounded.
+1. Real notifications — WhatsApp / SMS for pharmacy enquiry and SOS, instead of in-app only.
+2. Live ops feeds — hospital bed APIs / NHP-style directories instead of static JSON.
+3. Real tracking — GPS or a message bus (Redis pub/sub), not 3s simulated polls.
+4. Expert path — WebRTC (or a phone bridge) instead of a directory + stub consult.
+5. ABDM — POST the FHIR bundle to a sandbox, not only disk.
+6. Geography — more blocks than Purnia 854301; radius search when PIN misses.
+7. Corpus — more STWs (snakebite, maternal, sepsis) still ICMR-grounded.
+8. Agents orchestration and evaluation pipelines, continous performance monitoring and guardrails 
 
 Principles that stay: human trigger, Sarvam for Indic input, ICMR for clinical text, Jan Aushadhi first, deterministic ops data.
 
