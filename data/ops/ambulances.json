@@ -1,0 +1,16 @@
+[
+  {
+    "id": "AMB-108-01",
+    "provider": "108 Govt Service",
+    "type": "ALS (Advanced Life Support)",
+    "current_coordinates": {"lat": 25.7750, "lng": 87.4740},
+    "status": "available"
+  },
+  {
+    "id": "AMB-VOL-01",
+    "provider": "Community Volunteer - Rajesh",
+    "type": "Private SUV (No ALS)",
+    "current_coordinates": {"lat": 25.7800, "lng": 87.4850},
+    "status": "available"
+  }
+]

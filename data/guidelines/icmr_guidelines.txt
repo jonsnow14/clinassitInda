@@ -1,0 +1,126 @@
+# ICMR Standard Treatment Workflows (STW) & Primary Care Emergency Guidelines
+
+## 1. Acute Coronary Syndrome (NSTEMI / STEMI)
+- **Presentation:** Acute chest pain, heavy pressure radiating to left arm/jaw, dyspnea, diaphoresis. High risk: HTN, DM2.
+- **Assessment:** 12-lead ECG within 10 mins. Elevated Troponin.
+- **Immediate Management (PHC):** 
+  - Aspirin 300mg (chewable).
+  - Clopidogrel 300mg loading dose.
+  - Atorvastatin 80mg stat.
+  - Oxygen ONLY if SpO2 < 94%.
+  - Nitroglycerin 0.5mg sublingual (DO NOT give if SBP < 90 mmHg).
+- **Referral:** Golden hour (90 mins) to PCI-capable center. DO NOT give NSAIDs (Diclofenac/Ibuprofen).
+
+## 2. Road Traffic Accident (RTA) / Hemorrhagic Shock (Intense Bleeding)
+- **Presentation:** Blunt or penetrating trauma, intense active bleeding, hypotension, tachycardia, altered sensorium.
+- **Immediate Management (PHC):**
+  - **C-A-B-C-D-E Approach:** Stabilize cervical spine first.
+  - **Hemorrhage Control:** Apply firm direct pressure over bleeding wounds. Use tight pressure bandage or tourniquet for uncontrolled limb bleeding.
+  - **IV Access:** Establish two wide-bore IV lines (16G or 18G).
+  - **Resuscitation:** Rapid infusion of 1-2 Liters warm Ringer's Lactate (RL) or Normal Saline (NS).
+  - **Analgesia:** IV Paracetamol or Tramadol.
+- **Referral:** Refer immediately to trauma center. DO NOT remove impaled objects; stabilize them.
+
+## 3. Snakebite (Unknown or Poisonous)
+- **Presentation:** Fang marks, local swelling, bleeding from gums (Hemotoxic - Viper), ptosis/respiratory paralysis (Neurotoxic - Cobra/Krait).
+- **Immediate Management (PHC):**
+  - **Reassure & Immobilize:** Immobilize the bitten limb using a splint (like a fractured limb).
+  - **Test:** 20-minute Whole Blood Clotting Test (20WBCT). If blood doesn't clot, it is hemotoxic.
+  - **ASV:** Administer Polyvalent Anti-Snake Venom (ASV) 10 vials if systemic envenomation signs are present.
+- **Referral:** DO NOT cut the wound, DO NOT attempt suction, DO NOT tie a tight tourniquet (use a crepe bandage). Refer for ventilator/dialysis support.
+
+## 4. Acute Ischemic Stroke / CVA
+- **Presentation:** Sudden onset facial droop, arm weakness, slurred speech (FAST).
+- **Immediate Management (PHC):**
+  - Check Capillary Blood Glucose (CBG) immediately to rule out Hypoglycemia (which mimics stroke).
+  - Maintain airway and SpO2 > 94%.
+  - Keep NPO (nil per os) to prevent aspiration.
+- **Referral:** Time is brain (4.5-hour window for thrombolysis). Refer to CT-equipped facility immediately. DO NOT give Aspirin/Clopidogrel at PHC until hemorrhagic stroke is ruled out by CT scan. DO NOT aggressively lower high blood pressure.
+
+## 5. Severe Asthma Exacerbation
+- **Presentation:** Severe breathlessness, inability to speak in full sentences, wheezing, SpO2 < 90%.
+- **Immediate Management (PHC):**
+  - Salbutamol nebulization (2.5 - 5mg) back-to-back 3 doses in one hour.
+  - Ipratropium nebulization.
+  - Systemic Corticosteroids: IV Hydrocortisone 100-200mg or Oral Prednisolone 40-50mg.
+  - Oxygen therapy to maintain SpO2 94-98%.
+- **Referral:** If no improvement, arrange transfer with continuous nebulization.
+
+## 6. Anaphylaxis (Severe Allergic Reaction)
+- **Presentation:** Sudden hives, swelling of lips/tongue, stridor, wheeze, severe hypotension after insect sting, drug, or food.
+- **Immediate Management (PHC):**
+  - **CRITICAL:** Injection Adrenaline (Epinephrine) 0.5 ml of 1:1000 solution INTRAMUSCULAR (IM) in the mid-anterolateral thigh. Repeat every 5-15 mins if no improvement.
+  - Elevate legs. Fast IV fluids (RL/NS).
+  - IV Chlorpheniramine (Avil) and IV Hydrocortisone as secondary measures.
+- **Referral:** Refer if airway compromised or biphasic reaction suspected.
+
+## 7. Organophosphorus (OP) Poisoning
+- **Presentation:** Farmer with exposure to pesticides, pinpoint pupils (miosis), excessive salivation, sweating, bradycardia, muscle fasciculations.
+- **Immediate Management (PHC):**
+  - Decontamination: Remove clothes, wash skin with soap and water (use gloves).
+  - **Antidote:** Atropine 2-3 mg IV stat. Double the dose every 5 minutes until "atropinization" (clear lungs, heart rate > 80, dry mouth, dilated pupils).
+- **Referral:** Refer to ICU. DO NOT induce emesis if consciousness is altered.
+
+## 8. Post-Partum Hemorrhage (PPH)
+- **Presentation:** Heavy vaginal bleeding (>500ml) immediately after childbirth, signs of shock.
+- **Immediate Management (PHC):**
+  - Fundal massage to stimulate uterine contraction.
+  - Inj. Oxytocin 10 IU IM or 20-40 IU in 1L IV fluid at 60 drops/min.
+  - Tab Misoprostol 800 mcg sublingually or per rectum.
+  - Two wide-bore IV lines, aggressive fluid resuscitation.
+- **Referral:** Urgent referral if bleeding persists, keep ongoing bimanual compression.
+
+## 9. Acute Hypoglycemia
+- **Presentation:** Known diabetic, sweating, tremors, confusion, seizures, or coma. CBG < 70 mg/dL.
+- **Immediate Management (PHC):**
+  - If conscious: Give oral glucose powder, sugar water, or juice.
+  - If unconscious: 25% Dextrose (100ml) or 50% Dextrose (50ml) IV push rapidly. 
+- **Referral:** If consciousness does not return after dextrose, refer. DO NOT give oral fluids to an unconscious patient.
+
+## 10. Status Epilepticus (Continuous Seizures)
+- **Presentation:** Continuous tonic-clonic seizures lasting > 5 minutes or recurrent without regaining consciousness.
+- **Immediate Management (PHC):**
+  - Airway management (turn to side).
+  - Inj. Lorazepam 4mg IV slowly OR Inj. Midazolam 10mg IM/buccal.
+  - If continues after 5-10 mins, repeat dose. Load with IV Phenytoin or Levetiracetam if available.
+- **Referral:** Refer immediately for ICU care. DO NOT put anything in the patient's mouth.
+
+## 11. Severe Dengue / Dengue Shock Syndrome
+- **Presentation:** High fever, severe abdominal pain, persistent vomiting, mucosal bleeding, cold clammy skin, rapid weak pulse.
+- **Immediate Management (PHC):**
+  - Immediate fluid resuscitation: RL or NS 10-20 ml/kg over 1 hour.
+  - Monitor Hematocrit (HCT) and platelets if possible.
+- **Referral:** DO NOT give Aspirin, Ibuprofen, or any NSAIDs (risk of severe bleeding). Refer for inpatient monitoring.
+
+## 12. Acute Gastroenteritis with Severe Dehydration
+- **Presentation:** Profuse watery diarrhea, sunken eyes, dry mouth, loss of skin turgor, lethargy.
+- **Immediate Management (PHC):**
+  - Rapid IV rehydration with Ringer's Lactate (100 ml/kg divided: 30ml/kg in 30 mins, then 70ml/kg over 2.5 hours).
+  - Zinc supplementation (20mg/day for 14 days).
+  - ORS continuously as soon as the patient can drink.
+- **Referral:** DO NOT give anti-motility drugs (Loperamide) to children or in bloody diarrhea.
+
+## 13. Eclampsia (Seizures in Pregnancy)
+- **Presentation:** Pregnant woman (>20 weeks) with high BP (>160/110) and generalized seizures.
+- **Immediate Management (PHC):**
+  - Airway protection, turn to left lateral position.
+  - **Magnesium Sulfate (MgSO4):** Loading dose (Pritchard regimen) - 4g IV slowly over 5-10 mins, PLUS 10g IM (5g in each buttock).
+  - Control BP with Labetalol or Nifedipine.
+- **Referral:** Immediate referral to an obstetric emergency center.
+
+## 14. Dog Bite / Rabies Exposure (Category III)
+- **Presentation:** Single or multiple transdermal bites/scratches, licks on broken skin by a stray/unvaccinated animal.
+- **Immediate Management (PHC):**
+  - **Wound washing:** Flush continuously with running water and soap for 15 minutes. Apply Povidone-Iodine.
+  - Rabies Vaccine (ARV) - Day 0 dose IM or ID.
+  - Rabies Immunoglobulin (RIG) infiltration directly into and around the wound (CRITICAL for Cat III).
+- **Referral:** DO NOT suture the wound unless unavoidable (apply RIG first if suturing is needed).
+
+## 15. Major Burn Injury
+- **Presentation:** >15% Body Surface Area (BSA) burns in adults (or >10% in children), facial burns, inhalation injury (soot in mouth/nose).
+- **Immediate Management (PHC):**
+  - Stop the burning process, cool with running water for 15 mins (DO NOT use ice).
+  - Secure airway (especially if inhalation injury).
+  - Fluid resuscitation (Parkland formula): IV RL using large-bore cannula.
+  - Cover with clean, dry, sterile sheets.
+- **Referral:** DO NOT apply toothpaste, butter, or random ointments. Refer to burn unit.

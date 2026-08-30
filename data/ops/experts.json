@@ -1,0 +1,29 @@
+[
+  {
+    "id": "DOC-L2-01",
+    "name": "Dr. Rajesh Kumar",
+    "specialty": "Cardiologist (MD, DM)",
+    "hospital": "Max 7 Hospital, Purnia",
+    "pincode": "854301",
+    "status": "Available on Call",
+    "contact": "+91-9876543333"
+  },
+  {
+    "id": "DOC-L2-02",
+    "name": "Dr. Sneha Sharma",
+    "specialty": "Emergency Medicine",
+    "hospital": "District Hospital Purnia",
+    "pincode": "854301",
+    "status": "In Surgery",
+    "contact": "+91-9876543444"
+  },
+  {
+    "id": "DOC-L2-03",
+    "name": "Dr. Amit Verma",
+    "specialty": "General Physician (MD)",
+    "hospital": "Sadar Hospital Kasba",
+    "pincode": "854330",
+    "status": "Available Physical",
+    "contact": "+91-9876543555"
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "HOSP-PURN-01",
+    "name": "District Hospital Purnia",
+    "type": "District Hospital",
+    "pincode": "854301",
+    "coordinates": {"lat": 25.7771, "lng": 87.4753},
+    "beds": {
+      "icu_available": 4,
+      "oxygen_available": 12,
+      "general_available": 45
+    },
+    "cardiology_unit": true
+  },
+  {
+    "id": "HOSP-PURN-02",
+    "name": "Max 7 Hospital",
+    "type": "Private Tertiary",
+    "pincode": "854301",
+    "coordinates": {"lat": 25.7820, "lng": 87.4800},
+    "beds": {
+      "icu_available": 2,
+      "oxygen_available": 8,
+      "general_available": 20
+    },
+    "cardiology_unit": true
+  },
+  {
+    "id": "HOSP-PURN-03",
+    "name": "Sadar Hospital Kasba",
+    "type": "CHC",
+    "pincode": "854330",
+    "coordinates": {"lat": 25.8500, "lng": 87.5300},
+    "beds": {
+      "icu_available": 0,
+      "oxygen_available": 5,
+      "general_available": 15
+    },
+    "cardiology_unit": false
+  }
+]

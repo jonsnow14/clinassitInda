@@ -1,0 +1,29 @@
+[
+  {
+    "id": "PHARM-PMBJP-01",
+    "name": "Pradhan Mantri Bhartiya Janaushadhi Kendra - Line Bazar",
+    "type": "PMBJK",
+    "pincode": "854301",
+    "coordinates": {"lat": 25.7760, "lng": 87.4760},
+    "stock_status": "HIGH",
+    "contact": "+91-9876543210"
+  },
+  {
+    "id": "PHARM-PMBJP-02",
+    "name": "Pradhan Mantri Bhartiya Janaushadhi Kendra - Rambagh",
+    "type": "PMBJK",
+    "pincode": "854301",
+    "coordinates": {"lat": 25.7700, "lng": 87.4700},
+    "stock_status": "MEDIUM",
+    "contact": "+91-9876543211"
+  },
+  {
+    "id": "PHARM-PVT-01",
+    "name": "Apollo Pharmacy - Bhatta Bazar",
+    "type": "Private",
+    "pincode": "854301",
+    "coordinates": {"lat": 25.7780, "lng": 87.4790},
+    "stock_status": "HIGH",
+    "contact": "+91-9876543212"
+  }
+]

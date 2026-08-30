@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+llama-index
+llama-index-vector-stores-chroma
+llama-index-embeddings-huggingface
+chromadb
+pydantic
+python-dotenv
+geopy
+requests

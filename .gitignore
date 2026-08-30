@@ -1,0 +1,49 @@
+# --- Environment & Secrets ---
+.env
+.env.local
+*.env
+
+# --- Python & Virtual Environment ---
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# --- Node.js & Next.js Frontend ---
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+.npm-cache/
+
+# --- Logs & Runtime Process Files ---
+*.log
+backend.log
+frontend.log
+*.pid
+backend.pid
+
+# --- Local Cache & Vector DB Storage ---
+.cache/
+var/storage/
+var/cache/
+chroma_db/
+backend/app/storage/
+backend/app/chroma_db/
+
+# --- OS & IDE Metadata ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- LatentCode Sandbox Artifacts ---
+*.bak-file
+.latentcode/
+.opencode*
