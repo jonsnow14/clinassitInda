@@ -1,8 +1,22 @@
 # ClinAssistIndia
 
-Human-in-the-loop decision support for PHC workers: Hinglish consults grounded on official ICMR Standard Treatment Workflows, plus worker-triggered beds, ambulance, Jan Aushadhi, expert, and SOS actions.
+ClinAssistIndia is a **PHC case workspace** for a lone medical officer at an Indian Primary Health Centre: one queue, Hinglish notes, ICMR on the desk, and the next operational move under the worker’s finger — not an autonomous swarm.
 
-Clinical answers are **not** canned. They come from Sarvam `sarvam-105b` plus a local Chroma index of ICMR STW PDFs. If `SARVAM_API_KEY` is missing, the UI still boots and clinical consult returns an error.
+The officer types a case (`Patient 45M, SOB 3 din se, BP 160/100, sugar bhi hai, troponin slightly elevated. Kya karna chahiye?`). The **clinical agent** extracts facts with Sarvam `sarvam-105b`, retrieves official **ICMR Standard Treatment Workflow** passages from a local Chroma MiniLM index, generates a structured card (urgency, assessment, ICD-10, PHC-feasible steps, contraindications, referral slip, source lines), then Mayura (`mayura:v1`) puts worker-facing prose in Hindi Devanagari. Clinical answers are **not** canned. If `SARVAM_API_KEY` is missing, the UI still boots and consult returns an error.
+
+That card is decision support only. It does not dispatch anything by itself. After it, the officer taps what they need — **बेड**, **एम्बुलेंस**, **दवाई**, **एक्सपर्ट**, or **SOS** (or the slash commands `/beds`, `/transport`, `/pharmacy`, `/expert`, `/sos`). Those agents read curated local JSON for the demo node **PHC Khajanchi Hat, Purnia, Bihar (PIN 854301)**, not the vector index and not live government feeds:
+
+| After the card | What the worker gets in this build |
+|---|---|
+| **Beds** | Nearby public/private facilities ranked by ICU / oxygen / general need, ACS capability, and distance |
+| **Ambulance** | Dispatch from a local fleet list, then a map track (HTTP poll every 3s — simulated, not GPS) |
+| **Pharmacy** | Stock search with **Jan Aushadhi (PMBJK) first**, optional volunteer courier (same simulated track) |
+| **Expert** | Specialist directory (available / on-call / busy) and a stub consult — no WebRTC or phone bridge |
+| **SOS** | Police / community / volunteer alert **record** — no WhatsApp or SMS blast |
+
+Each consult also writes a silent ABDM-shaped FHIR R4 bundle (`Encounter`, `MedicationRequest`, `ServiceRequest`) under `apps/api/var/fhir/`. It is **not** posted to ABDM. The Next.js workspace (port **3002**) talks to FastAPI (port **8002**) over same-origin `/v1/*`; a Leaflet map shows the PHC, hospitals, and any dispatched vehicle.
+
+This checkout is a one-node POC: human-triggered agents, Sarvam for Indic input, ICMR for clinical text, Jan Aushadhi first, deterministic ops data. It is not a device, not a diagnosis, and not a live HMIS/108/ABDM integration. Treating judgment stays with the clinician. The full case write-up is **[docs/problem-statement.md](docs/problem-statement.md)**.
 
 ---
 
@@ -20,9 +34,9 @@ Clinical answers are **not** canned. They come from Sarvam `sarvam-105b` plus a 
 
 ## Project description
 
-ClinAssistIndia is a PHC case workspace for a lone medical officer in rural India. The worker types a Hinglish case (symptoms, vitals, labs). The clinical agent extracts facts, retrieves ICMR STW passages, and returns a structured card: urgency, assessment, ICD-10, step-by-step PHC actions, contraindications, and a referral slip.
+Two local processes: the Next.js workspace and a FastAPI orchestrator. Clinical RAG is the only path that calls Sarvam. Beds, transport, pharmacy, expert, and SOS are separate agents the worker starts from the card.
 
-Specialized agents **do not run on their own**. After the card, the worker taps **बेड**, **एम्बुलेंस**, **दवाई**, **एक्सपर्ट**, or **SOS**.
+Clinical path: Hinglish in → extract English facts (`sarvam-105b`) → MiniLM retrieve ICMR STW chunks → grounded `ClinicalCard` → Mayura Hindi → silent FHIR write.
 
 | Layer | What it is |
 |---|---|
@@ -33,7 +47,7 @@ Specialized agents **do not run on their own**. After the card, the worker taps 
 | Ops | Curated Purnia JSON (hospitals, ambulances, pharmacies, experts, SOS) |
 | FHIR | Silent ABDM-style `Encounter` / `MedicationRequest` / `ServiceRequest` on disk |
 
-Demo geography is **PHC Khajanchi Hat, Purnia, Bihar (PIN 854301)**.
+Demo geography is **PHC Khajanchi Hat, Purnia, Bihar (PIN 854301)**. Agents fire only from UI buttons or slash commands (`/clinical`, `/beds`, `/transport`, `/pharmacy`, `/expert`, `/sos`).
 
 ---
 
