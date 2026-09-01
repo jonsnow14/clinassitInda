@@ -165,7 +165,7 @@ def complete_json(
         payload: dict[str, Any] = {
             "model": model,
             "messages": messages,
-            "temperature": 0.2,
+            "temperature": 0,
             "max_tokens": max_tokens,
             "wiki_grounding": False,
             "response_format": {"type": "json_object"},
