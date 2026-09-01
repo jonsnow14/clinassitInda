@@ -2,7 +2,7 @@
 
 ClinAssistIndia is a **PHC case workspace** for a lone medical officer at an Indian Primary Health Centre: one queue, Hinglish notes, ICMR on the desk, and the next operational move under the worker’s finger — not an autonomous swarm.
 
-The officer types a case (`Patient 45M, SOB 3 din se, BP 160/100, sugar bhi hai, troponin slightly elevated. Kya karna chahiye?`). The **clinical agent** extracts facts with Sarvam `sarvam-105b`, retrieves official **ICMR Standard Treatment Workflow** passages from a local Chroma MiniLM index, generates a structured card (urgency, assessment, ICD-10, PHC-feasible steps, contraindications, referral slip, source lines), then Mayura (`mayura:v1`) puts worker-facing prose in Hindi Devanagari. Clinical answers are **not** canned. If `SARVAM_API_KEY` is missing, the UI still boots and consult returns an error.
+The officer types a case (`Patient 45M, SOB 3 din se, BP 160/100, sugar bhi hai, troponin slightly elevated. Kya karna chahiye?`). The **clinical agent** extracts facts ,retrieves official **ICMR Standard Treatment Workflow** passages from a local Chroma MiniLM index, generates a structured card (urgency, assessment, ICD-10, PHC-feasible steps, contraindications, referral slip, source lines), then  puts worker-facing prose in Hindi Devanagari. Clinical answers are **not** canned. 
 
 That card is decision support only. It does not dispatch anything by itself. After it, the officer taps what they need — **बेड**, **एम्बुलेंस**, **दवाई**, **एक्सपर्ट**, or **SOS** (or the slash commands `/beds`, `/transport`, `/pharmacy`, `/expert`, `/sos`). Those agents read curated local JSON for the demo node **PHC Khajanchi Hat, Purnia, Bihar (PIN 854301)**, not the vector index and not live government feeds:
 
