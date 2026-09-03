@@ -55,11 +55,11 @@ Demo geography is **PHC Khajanchi Hat, Purnia, Bihar (PIN 854301)**. Agents fire
 
 **Need:** Python 3.11+, Node 18+, a [Sarvam](https://dashboard.sarvam.ai) API key.
 
-This checkout uses **UI 3002** and **API 8002**. Do not bind 3000, 3001, 8000, or 8001.
+GitHub clones this repo into **`clinassitInda`** (the repo slug). A default `git clone` does not create `clinassitindia-public`. This checkout uses **UI 3002** and **API 8002**. Do not bind 3000, 3001, 8000, or 8001.
 
 ```bash
-git clone <this-repo>
-cd clinassitindia-public
+git clone https://github.com/jonsnow14/clinassitInda.git
+cd clinassitInda
 
 cp .env.example .env
 # set SARVAM_API_KEY=sk_...   (https://dashboard.sarvam.ai)
@@ -75,20 +75,23 @@ uvicorn app.main:app --reload --host 127.0.0.1 --port 8002
 
 # 3) UI — port 3002  (other terminal)
 cd apps/web
-npm install
+npm ci
 npm run dev
 ```
 
 Open **http://127.0.0.1:3002**
 
-Check the API:
+Check the API before using the UI:
 
 ```bash
 curl -s http://127.0.0.1:8002/v1/health
-# expect chroma_ready: true, sarvam_key_present: true
+# required: "chroma_ready": true  AND  "sarvam_key_present": true
+# if chroma_ready is false, ingest did not finish — do not open the UI yet
 ```
 
-Next.js proxies `/v1/*` to `http://127.0.0.1:8002`. Skip ingest on later runs if `data/chroma` is already built.
+Next.js proxies `/v1/*` to `http://127.0.0.1:8002`. Skip ingest on later runs if `data/chroma` is already built. Use `npm ci` (the lockfile is in git); do not `npm install`.
+
+Beds, ambulance, pharmacy, expert, and SOS are deterministic from `data/purnia/*.json`. The ICMR index is rebuilt locally by ingest. The clinical card is live Sarvam (`temperature` 0) plus Mayura — same prompt and key will not always print the same Hindi or ICD.
 
 `?debug=1` on the UI shows the silent FHIR encounter id (not the JSON).
 
@@ -193,7 +196,7 @@ Then: **बेड** → **एम्बुलेंस** → **दवाई** →
 bhaiya ko 3 din se bukhar aur khansi hai, bp 140/90, pehle se sugar ki dawai khata hai. icmr ke hisaab se kya protocol hai?
 ```
 
-Expect: a structured card (not free prose), ICMR source lines, Hindi worker-facing text, and a debug encounter id with `?debug=1`.
+Expect: a structured card (not free prose), ICMR source lines, Hindi worker-facing text, and a debug encounter id with `?debug=1`. Card wording can vary across runs even with the same key.
 
 ---
 
@@ -217,6 +220,7 @@ Other limits:
 - Embeddings are English MiniLM: Hinglish is extracted to English **before** retrieval.
 - One-node demo: no auth, no multi-PHC, no production hosting.
 - `data/chroma` and `data/icmr/pdfs` are generated locally and are not in git.
+- Clinical consult is not bit-identical: Sarvam + Mayura can differ across runs at `temperature` 0.
 
 ---
 
