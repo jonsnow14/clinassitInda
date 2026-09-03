@@ -55,7 +55,7 @@ Demo geography is **PHC Khajanchi Hat, Purnia, Bihar (PIN 854301)**. Agents fire
 
 **Need:** Python 3.11+, Node 18+, a [Sarvam](https://dashboard.sarvam.ai) API key.
 
-GitHub clones this repo into **`clinassitInda`** (the repo slug). A default `git clone` does not create `clinassitindia-public`. This checkout uses **UI 3002** and **API 8002**. Do not bind 3000, 3001, 8000, or 8001.
+GitHub clones this repo into **`clinassitInda`** (the repo slug). A default `git clone` does not create `clinassitindia-public`. This repo’s scripts bind the UI to **3002** and the API to **8002** (`npm run dev` and the `/v1/*` proxy).
 
 ```bash
 git clone https://github.com/jonsnow14/clinassitInda.git
@@ -79,7 +79,7 @@ npm ci
 npm run dev
 ```
 
-Open **http://127.0.0.1:3002**
+Open **http://127.0.0.1:3002** — that is the PHC workspace. Port **8002** is the JSON API only: `GET /` is 404 by design (`{"detail":"Not Found"}`).
 
 Check the API before using the UI:
 
@@ -211,7 +211,7 @@ Expect: a structured card (not free prose), ICMR source lines, Hindi worker-faci
 | Ambulance / courier movement | Simulated HTTP poll every 3s |
 | WhatsApp, SMS, ABDM POST, WebRTC | **Not** in this build |
 | FHIR | Written under `apps/api/var/fhir/`; not posted to ABDM |
-| Ports | UI **3002**, API **8002** only |
+| Ports | UI **3002**, API **8002** (as wired in `npm run dev`, the proxy, and CORS) |
 
 Other limits:
 
