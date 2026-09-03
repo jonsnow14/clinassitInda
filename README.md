@@ -1,6 +1,6 @@
 # ClinAssistIndia
 
-ClinAssistIndia is a **PHC case workspace** for a lone medical officer at an Indian Primary Health Centre: one queue, Hinglish notes, ICMR on the desk, and the next operational move under the worker’s finger — not an autonomous swarm.
+ClinAssistIndia is a **PHC case workspace** for  Indian Primary Health Centre: one queue, Hinglish notes, ICMR on the desk, and the next operational move under the worker’s finger — not an autonomous swarm.
 
 The officer types a case (`Patient 45M, SOB 3 din se, BP 160/100, sugar bhi hai, troponin slightly elevated. Kya karna chahiye?`). The **clinical agent** extracts facts ,retrieves official **ICMR Standard Treatment Workflow** passages from a local Chroma MiniLM index, generates a structured card (urgency, assessment, ICD-10, PHC-feasible steps, contraindications, referral slip, source lines), then  puts worker-facing prose in Hindi Devanagari. Clinical answers are **not** canned. 
 
@@ -140,7 +140,7 @@ Full module list, endpoints, and the five-step clinical pipeline: **[docs/archit
 
 ## What problem it solves
 
-A medical officer at a rural PHC is often alone, with a queue outside and the nearest cardiologist tens of kilometres away. Cases arrive in Hinglish. English-only guidelines and English-only models drop rural phrasing (`SOB 3 din se`).
+Provides an integrated worksapce for medical officers and staffs at PHC.
 
 ClinAssistIndia is for that desk:
 
@@ -151,7 +151,7 @@ ClinAssistIndia is for that desk:
 5. **Expert** — specialist directory and a consult request (no WebRTC in this build).
 6. **SOS** — law-enforcement / volunteer alert record.
 
-The worker stays in control. Output is decision support; treating judgment stays with the clinician.
+The PHC staff stays in control. Output is decision support; treating judgment stays with the clinician.
 
 Scenario write-up: **[docs/problem-statement.md](docs/problem-statement.md)**.
 
