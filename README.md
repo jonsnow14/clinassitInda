@@ -2,7 +2,7 @@
 
 ClinAssistIndia is a **PHC case workspace** for  Indian Primary Health Centre: one queue, Hinglish notes, ICMR on the desk, and the next operational move under the worker’s finger — not an autonomous swarm.
 
-The officer types a case (`Patient 45M, SOB 3 din se, BP 160/100, sugar bhi hai, troponin slightly elevated. Kya karna chahiye?`). The **clinical agent** extracts facts ,retrieves official **ICMR Standard Treatment Workflow** passages from a local Chroma MiniLM index, generates a structured card (urgency, assessment, ICD-10, PHC-feasible steps, contraindications, referral slip, source lines), then  puts worker-facing prose in Hindi Devanagari. Clinical answers are **not** canned. 
+The officer types a case query . The **clinical agent** extracts facts ,retrieves official **ICMR Standard Treatment Workflow** passages from a local Chroma MiniLM index, generates a structured card (urgency, assessment, ICD-10, PHC-feasible steps, contraindications, referral slip, source lines), then  puts worker-facing prose in Hindi Devanagari. Clinical answers are **not** canned. 
 
 That card is decision support only. It does not dispatch anything by itself. After it, the officer taps what they need — **बेड**, **एम्बुलेंस**, **दवाई**, **एक्सपर्ट**, or **SOS** (or the slash commands `/beds`, `/transport`, `/pharmacy`, `/expert`, `/sos`). Those agents read curated local JSON for the demo node **PHC Khajanchi Hat, Purnia, Bihar (PIN 854301)**, not the vector index and not live government feeds:
 
@@ -16,7 +16,7 @@ That card is decision support only. It does not dispatch anything by itself. Aft
 
 Each consult also writes a silent ABDM-shaped FHIR R4 bundle (`Encounter`, `MedicationRequest`, `ServiceRequest`) under `apps/api/var/fhir/`. It is **not** posted to ABDM. The Next.js workspace (port **3002**) talks to FastAPI (port **8002**) over same-origin `/v1/*`; a Leaflet map shows the PHC, hospitals, and any dispatched vehicle.
 
-This checkout is a one-node POC: human-triggered agents, Sarvam for Indic input, ICMR for clinical text, Jan Aushadhi first, deterministic ops data. It is not a device, not a diagnosis, and not a live HMIS/108/ABDM integration. Treating judgment stays with the clinician. The full case write-up is **[docs/problem-statement.md](docs/problem-statement.md)**.
+This checkout is a one-node POC: human-triggered agents,Indic input, ICMR for clinical text, Jan Aushadhi first, deterministic ops data. It is not a device, not a diagnosis, and not a live HMIS/108/ABDM integration. Treating judgment stays with the clinician. The full case write-up is **[docs/problem-statement.md](docs/problem-statement.md)**.
 
 ---
 
