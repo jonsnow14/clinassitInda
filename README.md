@@ -238,6 +238,7 @@ Next, in order:
 6. Geography — more blocks than Purnia 854301; radius search when PIN misses.
 7. Corpus — more STWs (snakebite, maternal, sepsis) still ICMR-grounded.
 8. Agents orchestration and evaluation pipelines, continous performance monitoring and guardrails 
+9. In build AI model router. 
 
 Principles that stay: human trigger, Sarvam for Indic input, ICMR for clinical text, Jan Aushadhi first, deterministic ops data.
 
