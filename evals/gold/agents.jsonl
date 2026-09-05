@@ -1,0 +1,9 @@
+{"id": "A-BEDS-ICU", "suite": "agents", "fn": "list_beds", "args": {"need": "icu"}, "expect": {"ordered_ids_prefix": ["gmch-purnea", "galaxy-heart-purnia", "sadar-purnia"]}}
+{"id": "A-BEDS-O2", "suite": "agents", "fn": "list_beds", "args": {"need": "oxygen"}, "expect": {"ordered_ids_prefix": ["gmch-purnea", "sadar-purnia", "galaxy-heart-purnia"]}}
+{"id": "A-PHARM-DAPT", "suite": "agents", "fn": "search", "args": {"meds": ["DAPT"]}, "expect": {"ordered_ids_prefix": ["pmbjk-khajanchi"]}}
+{"id": "A-TRANS-LIST", "suite": "agents", "fn": "list_transport", "args": {}, "expect": {"ordered_ids_prefix": ["102-als"]}}
+{"id": "A-TRANS-DISP", "suite": "agents", "fn": "dispatch_transport", "args": {}, "expect": {"has_trip_id": true}}
+{"id": "A-TRANS-TRACK", "suite": "agents", "fn": "track_transport", "args": {"trip_id": "mock_trip"}, "expect": {"status": "en_route"}}
+{"id": "A-EXP-LIST", "suite": "agents", "fn": "list_experts", "args": {}, "expect": {"ordered_ids_prefix": ["aiims-patna-cardio"]}}
+{"id": "A-EXP-CONN", "suite": "agents", "fn": "connect", "args": {"expert_id": "aiims-patna-cardio"}, "expect": {"status": "connecting"}}
+{"id": "A-SOS", "suite": "agents", "fn": "raise_sos", "args": {}, "expect": {"status": "active"}}
