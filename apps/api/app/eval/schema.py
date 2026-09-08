@@ -1,9 +1,14 @@
+"""Tagged-union gold rows and scorecard types for the eval harness.
+
+Production `app.main` must not import this package.
+"""
 from typing import Literal
 
 from pydantic import BaseModel, model_validator
 
 Suite = Literal["retrieval", "clinical", "agents", "suggested", "scenarios", "adversarial"]
 Gate = Literal["enforce", "track", "skip"]
+
 
 class RetrievalExpect(BaseModel):
     pdfs: list[str]
@@ -12,6 +17,7 @@ class RetrievalExpect(BaseModel):
     must_contain_any_dose: list[str] = []
     empty_ok: bool = False
     cardiac_hint_fired: bool | None = None
+
 
 class GoldRetrieval(BaseModel):
     id: str
@@ -29,14 +35,16 @@ class GoldRetrieval(BaseModel):
     @model_validator(mode="after")
     def query_xor_queries(self):
         if self.query_source == "retrieve_raw":
-            if not self.query or self.queries:
+            if self.query is None or self.query == "" or self.queries is not None:
                 raise ValueError("retrieve_raw requires query and forbids queries")
         if self.query_source == "consult_fusion":
-            if not self.queries or self.query:
+            if self.query is not None or not self.queries:
                 raise ValueError("consult_fusion requires queries and forbids query")
         return self
 
+
 class ExtractExpect(BaseModel):
+    """L2 gold field set without english_query; that lives on ClinicalExpect.english_query_must."""
     age: int | None = None
     sex: str | None = None
     symptoms: list[str] = []
@@ -44,6 +52,7 @@ class ExtractExpect(BaseModel):
     vitals: dict[str, str] = {}
     labs: dict[str, str] = {}
     comorbidities: list[str] = []
+
 
 class ClinicalExpect(BaseModel):
     diagnosis_family: list[str] = []
@@ -64,6 +73,7 @@ class ClinicalExpect(BaseModel):
     expected_rule_fail: list[str] = []
     synonyms: dict[str, list[str]] = {}
 
+
 class GoldClinical(BaseModel):
     id: str
     schema_version: str = "1.0.0"
@@ -77,7 +87,9 @@ class GoldClinical(BaseModel):
     expect: ClinicalExpect
     source_pdfs: list[str] = []
 
+
 class GoldAdversarial(BaseModel):
+    """Same body as GoldClinical; suite tag is adversarial so adversarial.jsonl parses."""
     id: str
     schema_version: str = "1.0.0"
     suite: Literal["adversarial"]
@@ -90,6 +102,7 @@ class GoldAdversarial(BaseModel):
     expect: ClinicalExpect
     source_pdfs: list[str] = []
 
+
 class AgentExpect(BaseModel):
     ordered_ids_prefix: list[str] = []
     first_n_accepts_nstemi: int | None = None
@@ -100,6 +113,7 @@ class AgentExpect(BaseModel):
     status: str | None = None
     has_trip_id: bool | None = None
     kind: str | None = None
+
 
 class GoldAgent(BaseModel):
     id: str
@@ -113,8 +127,10 @@ class GoldAgent(BaseModel):
     args: dict = {}
     expect: AgentExpect
 
+
 class SuggestedExpect(BaseModel):
     suggested_actions_exact: list[Literal["beds", "transport", "pharmacy", "expert", "sos"]]
+
 
 class GoldSuggested(BaseModel):
     id: str
@@ -123,6 +139,7 @@ class GoldSuggested(BaseModel):
     card: dict
     expect: SuggestedExpect
 
+
 class JourneyStepExpect(BaseModel):
     status: str | None = None
     status_in: list[str] = []
@@ -130,6 +147,7 @@ class JourneyStepExpect(BaseModel):
     kind: str | None = None
     vehicle_id: str | None = None
     ordered_ids_prefix: list[str] = []
+
 
 class JourneyStep(BaseModel):
     id: str
@@ -140,13 +158,16 @@ class JourneyStep(BaseModel):
     assert_ref: str | None = None
     expect: JourneyStepExpect = JourneyStepExpect()
 
+
 class GoldScenario(BaseModel):
     id: str
     schema_version: str = "1.0.0"
     suite: Literal["scenarios"]
     steps: list[JourneyStep]
 
+
 GoldRow = GoldRetrieval | GoldClinical | GoldAdversarial | GoldAgent | GoldSuggested | GoldScenario
+
 
 class LayerResult(BaseModel):
     layer: str
@@ -156,6 +177,7 @@ class LayerResult(BaseModel):
     metrics: dict = {}
     evidence: dict = {}
     judge: str | None = None
+
 
 class CaseScorecard(BaseModel):
     case_id: str
