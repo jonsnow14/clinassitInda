@@ -241,5 +241,3 @@ Next, in order:
 9. In build AI model router. 
 
 Principles that stay: human trigger, Sarvam for Indic input, ICMR for clinical text, Jan Aushadhi first, deterministic ops data.
-
-Longer plan: **[docs/roadmap.md](docs/roadmap.md)**. Design sketch: **[docs/design/base-design.jpg](docs/design/base-design.jpg)**.
